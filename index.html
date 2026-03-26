@@ -208,6 +208,7 @@
 </head>
 <body class="antialiased text-slate-800 dark:text-slate-100 min-h-screen flex flex-col items-center bg-slate-100 dark:bg-slate-900 transition-colors duration-500">
     
+    <!-- Splash Screen Reveal -->
     <div id="splash-screen" class="bg-gradient-to-br from-slate-900 via-slate-800 to-black">
         <div class="flex flex-col items-center justify-center text-center px-4">
             <span class="splash-welcome text-brand-light font-bold tracking-[0.3em] uppercase text-xs sm:text-sm mb-4">Welcome To</span>
@@ -221,11 +222,13 @@
         </div>
     </div>
 
+    <!-- Blank & Gold Clean Gradient Background -->
     <div class="fixed inset-0 z-[-2] bg-slate-100 dark:bg-slate-900">
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-amber-200/40 via-transparent to-transparent dark:from-amber-900/20 dark:via-transparent dark:to-transparent"></div>
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-slate-200 via-transparent to-transparent dark:from-slate-800/50 dark:via-transparent dark:to-transparent"></div>
     </div>
 
+    <!-- Utilizing your new image for the background -->
     <div class="fixed inset-0 z-[-2]">
         <img src="https://i.imgur.com/CvcHJ9b.jpg" alt="Charchee Background" class="w-full h-full object-cover object-center scale-105 filter blur-sm transition-all duration-700 brightness-100 dark:brightness-[0.4]">
     </div>
@@ -233,6 +236,7 @@
 
     <div class="w-full max-w-3xl px-4 py-8 sm:px-6 lg:px-8 flex-grow flex flex-col relative z-0">
         
+        <!-- Controls -->
         <div class="flex justify-center items-center mb-6 sticky top-4 z-50 relative">
             <div id="languageSelector" class="bg-white/70 dark:bg-slate-800/80 backdrop-blur-md border border-white/40 dark:border-white/10 rounded-full px-6 py-3 flex gap-4 sm:gap-6 shadow-xl fade-in-up transition-colors duration-300">
                 <button data-lang="en" class="lang-btn active transition-transform hover:scale-110 opacity-100" aria-label="English"><img src="https://flagcdn.com/w40/us.png" class="w-6 h-6 rounded-full object-cover shadow-sm" alt="USA Flag"></button>
@@ -256,14 +260,16 @@
             <p class="mt-2 text-lg sm:text-2xl font-light text-slate-600 dark:text-slate-300 tracking-wide" data-key="company_sub">
                 Enterprise Hospitality Software
             </p>
-            <div class="flex items-center justify-center gap-2 mt-4 text-sm sm:text-base font-semibold text-brand-dark dark:text-brand-light drop-shadow-md tracking-wide">
-                <span id="live-clock"></span>
-                <span class="opacity-40 text-sm text-slate-500 dark:text-slate-400">•</span>
-                <span id="live-weather" class="animate-pulse">☀️ --&deg;F / --&deg;C</span>
+            <!-- REPAIRED CLOCK/WEATHER FLEX CONTAINER -->
+            <div class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 mt-4 text-xs sm:text-sm font-semibold text-brand-dark dark:text-brand-light drop-shadow-md tracking-wide">
+                <span id="live-clock" class="whitespace-nowrap"></span>
+                <span class="opacity-40 text-slate-500 dark:text-slate-400 hidden sm:inline">•</span>
+                <span id="live-weather" class="animate-pulse whitespace-nowrap">☀️ --&deg;F / --&deg;C</span>
             </div>
             <div class="h-1.5 w-24 bg-brand rounded-full mx-auto mt-6 animate-pulse-bar transition-all duration-300"></div>
         </header>
 
+        <!-- 3-Way Tab Navigation (The Trojan Horse) -->
         <div class="flex justify-center mb-8 fade-in-up stagger-2 relative z-40">
             <div class="bg-white/70 dark:bg-slate-800/80 p-1.5 rounded-full shadow-xl flex gap-1 border border-white/20 overflow-x-auto max-w-full no-scrollbar">
                 <button id="btn-guide" class="px-4 sm:px-6 py-2 whitespace-nowrap rounded-full font-bold text-sm sm:text-base transition-all duration-300 bg-brand text-white shadow-md" data-key="tab_overview">
@@ -280,8 +286,10 @@
 
         <div class="glass-panel rounded-3xl p-3 shadow-2xl fade-in-up stagger-2 mb-8">
             
+            <!-- VIEW 1: PRODUCT OVERVIEW -->
             <div id="view-guide" class="view-section flex flex-col space-y-1">
                 
+                <!-- The Problem / Philosophy -->
                 <div class="menu-card group">
                     <button aria-expanded="false" class="accordion-trigger w-full p-5 flex items-center justify-between text-left focus:outline-none">
                         <div class="flex items-center gap-4">
@@ -304,6 +312,7 @@
                     </div>
                 </div>
 
+                <!-- Core Features -->
                 <div class="menu-card group">
                     <button aria-expanded="false" class="accordion-trigger w-full p-5 flex items-center justify-between text-left focus:outline-none">
                         <div class="flex items-center gap-4">
@@ -325,6 +334,7 @@
                     </div>
                 </div>
 
+                <!-- Pricing & Deployment -->
                 <div class="menu-card group">
                     <button aria-expanded="false" class="accordion-trigger w-full p-5 flex items-center justify-between text-left focus:outline-none">
                         <div class="flex items-center gap-4">
@@ -349,16 +359,20 @@
                                     <p class="text-sm text-slate-600 dark:text-slate-400" data-key="card3_monthly_desc">Enterprise cloud hosting, SSL security, and one scheduled monthly data audit to ensure perfect accuracy.</p>
                                 </div>
                              </div>
+                             
+                             <!-- ANNUAL PLAN HERO CARD -->
                              <div class="bg-brand/5 dark:bg-brand/10 p-5 rounded-xl border border-brand/30 dark:border-brand/30 transition-colors mb-2 relative overflow-hidden">
                                  <div class="absolute top-0 right-0 bg-brand text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider shadow-sm" data-key="card3_annual_badge">Setup Waived</div>
                                  <h3 class="font-bold text-slate-900 dark:text-white transition-colors mb-1" data-key="card3_annual_title">Annual Enterprise Plan</h3>
                                  <p class="font-mono text-xl text-brand-dark dark:text-brand-light font-bold mb-2">$2,400 <span class="text-xs text-slate-500 uppercase tracking-wide font-sans font-normal" data-key="card3_year">/ Year</span></p>
                                  <p class="text-sm text-slate-600 dark:text-slate-400" data-key="card3_annual_desc">12 months of enterprise cloud hosting and monthly data audits. Initial $500 setup fee is completely waived.</p>
                              </div>
+
                         </div>
                     </div>
                 </div>
 
+                <!-- Contact / Demo -->
                 <div class="menu-card group">
                     <button aria-expanded="false" aria-controls="content-contact" class="accordion-trigger w-full p-5 flex items-center justify-between text-left focus:outline-none">
                         <div class="flex items-center gap-4">
@@ -386,6 +400,7 @@
                 </div>
             </div>
 
+            <!-- VIEW 2: SAMPLE MENU (The Trojan Sales Pitch) -->
             <div id="view-menu" class="hidden view-section">
                 <div class="flex items-center justify-between mb-6 border-b-2 border-brand/30 pb-4">
                     <div>
@@ -458,8 +473,10 @@
                 </div>
             </div>
 
+            <!-- VIEW 3: GLOBAL GUIDE (The World-Class Demo) -->
             <div id="view-directory" class="hidden view-section flex flex-col space-y-1">
                 
+                <!-- The 7 Wonders -->
                 <div class="menu-card group">
                     <button aria-expanded="false" class="accordion-trigger w-full p-5 flex items-center justify-between text-left focus:outline-none">
                         <div class="flex items-center gap-4">
@@ -508,6 +525,7 @@
                     </div>
                 </div>
 
+                <!-- World Class Dining -->
                 <div class="menu-card group">
                     <button aria-expanded="false" class="accordion-trigger w-full p-5 flex items-center justify-between text-left focus:outline-none">
                         <div class="flex items-center gap-4">
@@ -548,6 +566,7 @@
                     </div>
                 </div>
 
+                <!-- Global Landmarks -->
                 <div class="menu-card group">
                     <button aria-expanded="false" class="accordion-trigger w-full p-5 flex items-center justify-between text-left focus:outline-none">
                         <div class="flex items-center gap-4">
@@ -679,6 +698,7 @@
                 tab_overview: "Resumen", tab_menu: "Menú de Muestra", tab_guide_global: "Guía Global",
                 company_name: "Hello Charchee", company_sub: "Software de Hospitalidad", footer_slogan: "Guías Superiores para Huéspedes.",
                 card1_title: "Erradique la Fricción Digital", card1_body1: "Los hoteles de lujo gastan millones perfeccionando la llegada, pero obligan a los huéspedes a usar un laberinto digital de 2 estrellas solo para encontrar la contraseña del Wi-Fi.", card1_body2: "Hello Charchee es una aplicación web sin descargas, construida exclusivamente para sus huéspedes. Reemplazamos los directorios obsoletos con un panel elegante e instantáneo.",
+                card2_title: "Capacidades Empresariales", card2_f1_title: "Matriz de Traducción:", card2_f1_desc: "Convierte instantáneamente toda la guía a 7 idiomas sin plugins inexactos.", card2_f2_title: "Guía Local Viva:", card2_f2_desc: "Un directorio de restaurantes seguros adaptado a sus coordenadas.", card2_f3_title: "Alivio para Recepción:", card2_f3_desc: "Copiar Wi-Fi con un toque y horarios de restaurantes en vivo reduce drásticamente las llamadas.",
                 card3_title: "Precios", card3_setup_title: "Configuración", card3_onetime: "Pago Único", card3_setup_desc: "Marca de interfaz personalizada, digitalización del menú y curación de la guía local.", card3_monthly_title: "Mantenimiento", card3_month: "/ Mes", card3_monthly_desc: "Alojamiento en la nube, seguridad SSL y una auditoría mensual.", 
                 card3_annual_badge: "Configuración Gratis", card3_annual_title: "Plan Empresarial Anual", card3_year: "/ Año", card3_annual_desc: "12 meses de alojamiento en la nube y auditorías de datos. La tarifa inicial de $500 se elimina por completo.",
                 card4_title: "Comenzar", card4_subtitle: "¿Listo para mejorar la experiencia de sus huéspedes?", card4_action: "Copiar correo", card4_hover: "Copiar al portapapeles",
@@ -697,6 +717,7 @@
                 tab_overview: "Aperçu", tab_menu: "Menu Démo", tab_guide_global: "Guide Global",
                 company_name: "Hello Charchee", company_sub: "Logiciel d'Hôtellerie", footer_slogan: "Guides Supérieurs.",
                 card1_title: "Éradiquer la Friction", card1_body1: "Les hôtels forcent les clients dans un labyrinthe numérique juste pour trouver le Wi-Fi.", card1_body2: "Hello Charchee est une application web sans téléchargement. Nous remplaçons les guides papier par un tableau de bord élégant.",
+                card2_title: "Capacités d'Entreprise", card2_f1_title: "Matrice de Traduction:", card2_f1_desc: "Convertit instantanément votre guide en 7 langues.", card2_f2_title: "Guide Local:", card2_f2_desc: "Répertoire de restaurants sûrs adapté à vos coordonnées.", card2_f3_title: "Soulagement de la Réception:", card2_f3_desc: "Copie du Wi-Fi en un clic réduit considérablement les appels.",
                 card3_title: "Tarification", card3_setup_title: "Configuration", card3_onetime: "Unique", card3_setup_desc: "Interface personnalisée et numérisation des menus.", card3_monthly_title: "Maintenance", card3_month: "/ Mois", card3_monthly_desc: "Hébergement cloud, sécurité SSL et audit mensuel.", 
                 card3_annual_badge: "Frais Offerts", card3_annual_title: "Plan Entreprise Annuel", card3_year: "/ An", card3_annual_desc: "12 mois d'hébergement cloud et d'audits de données. Les frais de configuration de 500 $ sont entièrement annulés.",
                 card4_title: "Commencer", card4_subtitle: "Prêt à améliorer l'expérience client ?", card4_action: "Copier l'e-mail", card4_hover: "Copié !",
@@ -715,6 +736,7 @@
                 tab_overview: "Übersicht", tab_menu: "Beispiel-Menü", tab_guide_global: "Globaler Guide",
                 company_name: "Hello Charchee", company_sub: "Hospitality Software", footer_slogan: "Überlegene Gäste-Guides.",
                 card1_title: "Digitale Reibung beseitigen", card1_body1: "Luxushotels zwingen Gäste oft in ein digitales Labyrinth, nur um das WLAN-Passwort zu finden.", card1_body2: "Hello Charchee ist eine reibungslose Web-App ohne Download. Wir ersetzen veraltete Papiermappen durch ein elegantes Dashboard.",
+                card2_title: "Unternehmensfunktionen", card2_f1_title: "Native Übersetzung:", card2_f1_desc: "Übersetzt Ihren gesamten Guide sofort in 7 Sprachen.", card2_f2_title: "Lokaler Guide:", card2_f2_desc: "Ein maßgeschneidertes Verzeichnis von Restaurants.", card2_f3_title: "Entlastung der Rezeption:", card2_f3_desc: "WLAN-Kopie mit einem Klick reduziert Anrufe drastisch.",
                 card3_title: "Preise", card3_setup_title: "Einrichtung", card3_onetime: "Einmalig", card3_setup_desc: "Individuelles Branding und Menü-Digitalisierung.", card3_monthly_title: "Wartung", card3_month: "/ Monat", card3_monthly_desc: "Cloud-Hosting, SSL und ein monatliches Daten-Audit.", 
                 card3_annual_badge: "Einrichtung Frei", card3_annual_title: "Jährlicher Enterprise-Plan", card3_year: "/ Jahr", card3_annual_desc: "12 Monate Cloud-Hosting und Daten-Audits. Die anfängliche Einrichtungsgebühr von $500 entfällt komplett.",
                 card4_title: "Loslegen", card4_subtitle: "Bereit für das Upgrade?", card4_action: "E-Mail kopieren", card4_hover: "In die Zwischenablage kopieren",
@@ -733,6 +755,7 @@
                 tab_overview: "概要", tab_menu: "サンプルメニュー", tab_guide_global: "グローバルガイド",
                 company_name: "Hello Charchee", company_sub: "ホスピタリティ・ソフトウェア", footer_slogan: "最高のゲストガイド。",
                 card1_title: "デジタルの摩擦をなくす", card1_body1: "Wi-Fiのパスワードを探すためだけに、ゲストに不便なデジタル体験を強いています。", card1_body2: "ダウンロード不要のWebアプリです。紙の案内を、エレガントなダッシュボードに置き換えます。",
+                card2_title: "エンタープライズ機能", card2_f1_title: "ネイティブ翻訳:", card2_f1_desc: "ガイド全体を即座に7か国語に変換します。", card2_f2_title: "ローカルガイド:", card2_f2_desc: "安全で歩いて行けるレストランの厳選ディレクトリ。", card2_f3_title: "フロントの負担軽減:", card2_f3_desc: "Wi-Fiコピペ機能により、問い合わせを劇的に減らします。",
                 card3_title: "料金", card3_setup_title: "セットアップ", card3_onetime: "初期費用", card3_setup_desc: "メニューのデジタル化、ローカルガイド作成。", card3_monthly_title: "保守・運用", card3_month: "/ 月", card3_monthly_desc: "クラウドホスティング、SSL、月1回のデータ監査。", 
                 card3_annual_badge: "初期費用無料", card3_annual_title: "年間エンタープライズプラン", card3_year: "/ 年", card3_annual_desc: "12ヶ月のクラウドホスティングとデータ監査。初期費用500ドルが完全に免除されます。",
                 card4_title: "始める", card4_subtitle: "エクスペリエンスを向上させる準備はできましたか？", card4_action: "メールをコピー", card4_hover: "コピーしました",
@@ -751,6 +774,7 @@
                 tab_overview: "产品概述", tab_menu: "演示菜单", tab_guide_global: "全球指南",
                 company_name: "Hello Charchee", company_sub: "企业级酒店软件", footer_slogan: "卓越的客户指南。",
                 card1_title: "消除数字摩擦", card1_body1: "豪华酒店让客人陷入为了寻找Wi-Fi密码而苦恼的数字迷宫。", card1_body2: "Hello Charchee 是一款无需下载的无摩擦网络应用程序。我们用优雅、即时的仪表板取代了过时的纸质指南。",
+                card2_title: "企业级功能", card2_f1_title: "原生翻译:", card2_f1_desc: "瞬间将您的整个指南翻译成7种语言。", card2_f2_title: "本地指南:", card2_f2_desc: "量身定制的安全、可步行的餐厅目录。", card2_f3_title: "前台减负:", card2_f3_desc: "一键复制Wi-Fi密码，大幅减少前台询问电话。",
                 card3_title: "价格", card3_setup_title: "设置与整合", card3_onetime: "一次性", card3_setup_desc: "定制品牌，菜单数字化和指南策划。", card3_monthly_title: "主动维护", card3_month: "/ 月", card3_monthly_desc: "云托管，SSL安全以及每月数据审计。", 
                 card3_annual_badge: "免设置费", card3_annual_title: "年度企业计划", card3_year: "/ 年", card3_annual_desc: "12个月的企业云托管和数据审计。完全免除500美元的初始设置费。",
                 card4_title: "开始", card4_subtitle: "准备好提升体验了吗？", card4_action: "点击复制邮箱", card4_hover: "已复制",
@@ -769,6 +793,7 @@
                 tab_overview: "Przegląd", tab_menu: "Menu Demo", tab_guide_global: "Przewodnik",
                 company_name: "Hello Charchee", company_sub: "Oprogramowanie Hotelowe", footer_slogan: "Najlepsze Przewodniki.",
                 card1_title: "Wyeliminuj Cyfrowe Tarcie", card1_body1: "Luksusowe hotele zmuszają gości do cyfrowego labiryntu tylko po to, by znaleźć hasło do Wi-Fi.", card1_body2: "Hello Charchee to aplikacja internetowa bez pobierania. Zastępujemy przestarzałe informatory eleganckim pulpitem.",
+                card2_title: "Możliwości", card2_f1_title: "Natywne Tłumaczenie:", card2_f1_desc: "Błyskawicznie tłumaczy cały przewodnik na 7 języków.", card2_f2_title: "Lokalny Przewodnik:", card2_f2_desc: "Katalog restauracji dostosowany do Twoich współrzędnych.", card2_f3_title: "Odciążenie Recepcji:", card2_f3_desc: "Kopiowanie Wi-Fi drastycznie zmniejsza liczbę telefonów.",
                 card3_title: "Cennik", card3_setup_title: "Konfiguracja", card3_onetime: "Jednorazowo", card3_setup_desc: "Niestandardowy branding UI i digitalizacja.", card3_monthly_title: "Utrzymanie", card3_month: "/ Miesiąc", card3_monthly_desc: "Hosting, SSL i comiesięczny audyt.", 
                 card3_annual_badge: "Bez Opłaty", card3_annual_title: "Roczny Plan Korporacyjny", card3_year: "/ Rok", card3_annual_desc: "12 miesięcy hostingu i audytów danych. Początkowa opłata instalacyjna 500$ jest całkowicie zniesiona.",
                 card4_title: "Zacznij", card4_subtitle: "Gotowy na ulepszenie?", card4_action: "Skopiuj email", card4_hover: "Skopiowano",
@@ -931,7 +956,7 @@
                 
                 const clockElement = document.getElementById('live-clock');
                 if (clockElement) {
-                    clockElement.innerHTML = `LIVE DASHBOARD DEMO &nbsp;&bull;&nbsp; ${timeString}`;
+                    clockElement.innerHTML = `LIVE DEMO &nbsp;&bull;&nbsp; ${timeString}`;
                 }
             }
             setInterval(updateClock, 1000);
